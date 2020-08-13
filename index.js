@@ -2,23 +2,31 @@ const modal = $('.modal')
 const endPage = document.querySelector('.endPage');
 let index = 0;
 
+let card;
+
 document.addEventListener('DOMContentLoaded', (event) => {
     for(let i = 1; i <= 12; i++) {
         createCard(i);
         index++;
     }
+
+    card = $('.card');
 });
 
 document.addEventListener('scroll', (e) => {
     const rect = endPage.getBoundingClientRect();
-    console.log(rect.top)
     if (Math.round(rect.top) <= window.innerHeight) {
-      for(let i = 0; i < 3; i++) {
+      for(let i = 0; i < 6; i++) {
           createCard(index);
           index++;
       }
     }
 })
+
+if(card) {
+    card.click(() => console.log('hello'))
+}
+
 
 function createCard(id) {
     const row = document.querySelector('.row');
