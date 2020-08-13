@@ -1,5 +1,6 @@
-h1{
+.title {
     text-align: center;
+    margin-top: 1rem;
 }
 
 h3{
@@ -14,8 +15,7 @@ h3{
 }
 
 .card {
-    margin-bottom: 1rem;
-    margin-right: 1rem;
+    margin: 1rem;
 }
 
 .video {
